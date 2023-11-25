@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Chiều cao cả màn hình */
+}
+  
+/* Để thêm các lề trái, lề phải, và lề trên, bạn có thể sử dụng margin hoặc padding cho phần .image */
+.image {
+    max-width: 100%; /* Hình ảnh sẽ co dãn tỷ lệ nhưng không vượt quá kích thước gốc */
+    max-height: 100%; /* Để đảm bảo hình ảnh không vượt quá màn hình */
+    margin-left: 125px; /* Thêm lề trái */
+    margin-right: 125px; /* Thêm lề phải */
+    margin-top: 100px; /* Thêm lề trên */
+}
+  
+/* Để làm cho hình ảnh tỷ lệ và không bị biến dạng */
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}

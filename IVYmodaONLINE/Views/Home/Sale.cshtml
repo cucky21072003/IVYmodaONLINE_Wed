@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<main>
+    <div class="content">
+        <div class="title">
+            <h2>Sign in</h2>
+        </div>
+
+        <div class="input">
+            <div class="textbox name">
+                <div class="text">
+                    <p>Họ tên</p>
+                    <p class="note">*</p>
+                </div>
+                <div class="push">
+                    <input type="text" placeholder="Name">
+                </div>
+
+            </div>
+            <div class="textbox sdt">
+                <div class="text">
+                    <p>Số điện thoại</p>
+                    <p class="note">*</p>
+                </div>
+                <div class="push">
+                    <input type="text" placeholder="SĐT">
+                </div>
+            </div>
+
+            <div class="textbox address">
+                <div class="text">
+                    <p>Địa chỉ</p>
+                    <p class="note">*</p>
+                </div>
+                <div class="push">
+                    <input type="text" placeholder="Address">
+                </div>
+            </div>
+
+            <div class="textbox email">
+                <div class="text">
+                    <p>Email</p>
+                    <p class="note">*</p>
+                </div>
+                <div class="push">
+                    <input type="text" placeholder="Email">
+                </div>
+            </div>
+        </div>
+        <div class="dangky">
+            <button class="register">Đăng ký</button>
+        </div>
+
+
+    </div>
+</main>
+
+<style>
+    .content {
+        margin-top: 100px;
+    }
+
+    .input {
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 500px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3px;
+    }
+
+    .textbox {
+        margin-top: 10px;
+    }
+
+    .note {
+        color: red;
+        margin-left: 5px;
+    }
+
+    input {
+        width: 300px;
+        height: 30px;
+        padding-left: 10px;
+    }
+
+    .dangky {
+        margin-left: 620px;
+        margin-top: 30px;
+    }
+
+        .dangky:hover {
+            opacity: 0.8;
+        }
+
+    .register {
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+        background-color: grey;
+    }
+</style>
