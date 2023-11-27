@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="898e6b5647c24e8b9620db870d928383" Name="Diagram1">
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.AspNetUser" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.sysdiagram" Width="1.5" PointX="9.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.SystemSetting" Width="1.5" PointX="11.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_Adv" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_Category" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_New" Width="1.5" PointX="10" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_Order" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_OrderDetail" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_Post" Width="1.5" PointX="10" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_Product" Width="1.5" PointX="3.125" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_ProductCategory" Width="1.5" PointX="0.625" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IVYmodaONLINEModel.tb_Subscrice" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="IVYmodaONLINEModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="IVYmodaONLINEModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="IVYmodaONLINEModel.FK_dbo_tb_New_dbo_tb_Category_CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="IVYmodaONLINEModel.FK_dbo_tb_Post_dbo_tb_Category_CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="IVYmodaONLINEModel.FK_dbo_tb_OrderDetail_dbo_tb_Order_OrderId" ManuallyRouted="false" />
+        <AssociationConnector Association="IVYmodaONLINEModel.FK_dbo_tb_OrderDetail_dbo_tb_Product_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="IVYmodaONLINEModel.FK_dbo_tb_Product_dbo_tb_ProductCategory_ProductCategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="IVYmodaONLINEModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

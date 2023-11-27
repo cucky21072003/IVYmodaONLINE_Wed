@@ -1,0 +1,298 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/font/fontawesome-free-6.3.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="~/styles/single_styles.css" />
+    <link rel="stylesheet" href="~/styles/css/css1/lifstyle.css" />
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/Home/Index"><img src="~/images/logo.png" alt=""></a>
+        </div>
+        <div class="menu">
+            <li>
+                <a href="">NỮ</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Áo</a></li>
+                    <ul>
+                        
+                        <li><a href="">Áo thun</a></li>
+                        <li><a href="">Áo kiểu</a></li>
+                        
+                    </ul>
+                    <li><a href="">Quần</a></li>
+                    <ul>
+                        
+                        <li><a href="">Quần dài</a></li>
+                        <li><a href="">Quần Lửng</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <a href="">NAM</a>
+                <ul class="sub-menu">
+                    <li><a href="">Áo</a></li>
+                    <ul>
+                        <li><a href="">Áo sơ mi</a></li>
+                        
+                        <li><a href="">Áo vest</a></li>
+                    </ul>
+                    <li><a href="">Quần</a></li>
+                    <ul>
+                        <li><a href="">Quần jeans</a></li>
+                        <li><a href="">Quần lửng</a></li>
+                        
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <a href="">TRẺ EM</a>
+                <ul class="sub-menu">
+                    <li><a href="">Bé trai</a></li>
+                    <ul>
+                        <li><a href="">Áo bé trai</a></li>
+                        <li><a href="">Quần bé trai</a></li>
+                        <li><a href="">Phụ kiện</a></li>
+                    </ul>
+                    <li><a href="">Bé gái</a></li>
+                    <ul>
+                        <li><a href="">Áo bé gái</a></li>
+                        <li><a href="">Váy bé gái</a></li>
+                        <li><a href="">Phụ kiện</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <a href="/Home/Sale" style="color: red;">SALE</a>
+            </li>
+            <li><a href="/Home/lifestyle">LIFESTYLE </a></li>
+            <li><a href="/Home/VeChungToi">VỀ CHÚNG TÔI</a></li>
+        </div>
+        <div class="others">
+            <li><input placeholder="Tìm kiếm" type="text"><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li><i class="fa-solid fa-headphones"></i></li>
+            <li><a href="/Home/Login"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="/Home/Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </div>
+
+    </header>
+    
+   
+    @RenderBody()
+
+<footer>
+    <div class="separator"></div>
+    <section class="app-container">
+        <p>Tải ứng dụng IVY moda</p>
+        <div class="app-google">
+            <a href=""><img src="~/images/appstore.png" alt=""></a>
+            <a href=""><img src="~/images/googleplay.png" alt=""></a>
+        </div>
+        <p>Nhận bản tin IVY moda</p>
+        <input type="text" placeholder="Nhập email của bạn...">
+    </section>
+    <!-------------footer------------->
+    <div class="footer-top">
+        <li><a href=""><img src="~/images/img-congthuong.png" alt=""></a></li>
+        <li><a href=""></a>Liên hệ</li>
+        <li><a href=""></a>Tuyển dụng</li>
+        <li><a href=""></a>Giới thiệu</li>
+        <li>
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-youtube"></a>
+        </li>
+    </div>
+    <div class="footer-center">
+        <p class="text">
+            Công ty Cổ phần Dự Kim với số đăng ký kinh doanh: 0105777650<br>
+            Địa chỉ đăng ký: Tổ dân phố Tháp, P.Đại Mỗ, Q.Nam Từ Liêm, TP.Hà Nội, Việt Nam<br>
+            Số điện thoại:<b>0243 205 2222/ 090 589 8683</b><br>
+            Email: cskh@ivy.com.vn
+        </p>
+    </div>
+    <div class="footer-bottom">
+        ©IVYmoda All rights reserved
+    </div>
+
+</footer>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 50px;
+        height: 70px;
+        align-self: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        /* background: rgba(225, 225, 225, 0.3);*/
+        background: #fff;
+    }
+
+    .logo {
+        flex: 1;
+        cursor: pointer;
+    }
+
+    .menu {
+        flex: 3;
+        display: flex;
+    }
+
+        .menu > li {
+            padding: 0 12px;
+            position: relative;
+        }
+
+            .menu > li:hover .sub-menu {
+                visibility: visible;
+                top: 35px
+            }
+
+    .sub-menu {
+        position: absolute;
+        width: 130px;
+        border: 1px solid #ccc;
+        padding: 10px 0 10px 20px;
+        visibility: hidden;
+        top: 50px;
+        transition: 0.3s;
+        z-index: 1;
+        background: #fff;
+        opacity:0.8;
+    }
+
+        .sub-menu ul {
+            padding-left: 20px;
+        }
+
+            .sub-menu ul a {
+                font-weight: normal;
+                font-size: 12px !important;
+            }
+
+    .menu li a {
+        font-size: 12px;
+        font-weight: bold !important;
+        display: block;
+        line-height: 20px;
+    }
+
+    .others {
+        flex: 1;
+        display: flex;
+        cursor: pointer;
+    }
+
+        .others > li {
+            padding: 12px;
+        }
+
+            .others > li:first-child {
+                position: relative;
+            }
+
+                .others > li:first-child input {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #333;
+                    outline: none;
+                }
+
+                .others > li:first-child i {
+                    position: absolute;
+                    right: 10px;
+                }
+
+    
+
+        /*app*/
+    
+
+ /*footer*/
+    footer {
+        text-align: center;
+        margin-top: 80px;
+    }
+    .separator {
+        height: 2px; /* Set the height of the separator */
+        background-color: #333; /* Set the color of the separator */
+    }
+    .footer-top {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        height: 70px;
+    }
+
+        .footer-top li {
+            padding: 0 12px;
+            position: relative;
+        }
+
+            .footer-top li::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 80%;
+                background: #ccc;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(-50%);
+            }
+
+            .footer-top li:last-child::after {
+                display: none;
+            }
+
+            .footer-top li:last-child a {
+                margin-right: 12px;
+                color: #333;
+            }
+
+    .footer-center {
+        text-align: center
+    }
+
+    .footer-bottom {
+        margin: 20px 0;
+        text-align: center
+    }
+
+</style>

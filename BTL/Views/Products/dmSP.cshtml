@@ -1,0 +1,25 @@
+﻿@model List<BTL.Models.tb_Product>
+@{
+    ViewBag.Title = "dmSP";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<main>
+    <div class="title">Danh sách sản phẩm</div>
+    <a href="">Thêm mới</a>
+    <hr />
+    @foreach (var product in Model)
+    {
+        <li>
+            <div>
+                <a href="#"><img src="@product.image" /></a>
+                <div class="nameproduct">@product.nameProduct</div>
+                <div class="cost-evaluate">
+                    
+                </div>
+
+            </div>
+        </li>
+    }
+</main>
+

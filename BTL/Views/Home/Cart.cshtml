@@ -1,0 +1,253 @@
+﻿@model List<BTL.Models.tb_Product>
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<main>
+    <section class="cart">
+        <div class="container">
+            <div class="cart-top-wrap">
+                <div class="cart-top">
+                    <div class="cart-top-cart cart-top-item"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div class="cart-top-address cart-top-item"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="cart-top-payment cart-top-item"><i class="fa-solid fa-money-bill-wave"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="cart-content">
+                <div class="cart-content-left">
+                    <table>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Size</th>
+                            <th>SL</th>
+                            <th>Thành tiền</th>
+                            <th>Xóa</th>
+                        </tr>
+                        <tr>
+                            @foreach (var product in Model)
+                            {
+                                <div>
+                                    <h4>@product.Title</h4>
+                                    <p>Price: @product.Price.ToString("C")</p>
+                                    @Html.ActionLink("Add to Cart", "AddToCart", new { productId = product.Id })
+                                </div>
+                            }
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div class="cart-content-right">
+                    <table>
+                        <tr>
+                            <th colspan="2">TỔNG TIỀN GIỎ HÀNG</th>
+                        </tr>
+                        <tr>
+                            <td>TỔNG SẢN PHẨM</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>TỔNG TIỀN HÀNG</td>
+                            <td>1.000.000 <sub>đ</sub></td>
+                        </tr>
+                        <tr>
+                            <td>TẠM TÍNH</td>
+                            <td><p style="color: black; font-weight: bold;">1.000.000<sub>đ</sub></p></td>
+                        </tr>
+                    </table>
+                    <div class="cart-content-right-text">
+                        <p>Bạn sẽ được miễn phí ship khi đơn hàng của bạn trị giá trên 2.000.000 đ</p>
+                    </div>
+                    <div class="cart-content-right-button">
+                        <button>ĐẶT HÀNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .cart {
+        padding: 100px 0;
+    }
+
+    .cart-top-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart-top {
+        height: 2px;
+        width: 1000px;
+        background-color: #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 60px 100px;
+    }
+
+    .cart-top-item {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+    }
+
+        .cart-top-item i {
+            color: #ddd;
+        }
+
+    .cart-top-cart {
+        border: 1px solid #0DB7EA;
+    }
+
+        .cart-top-cart i {
+            color: #0DB7EA;
+        }
+
+    .cart-content-left {
+        flex: 1;
+        padding-right: 30px;
+    }
+
+        .cart-content-left table {
+            width: 100%;
+            text-align: center;
+        }
+
+            .cart-content-left table th {
+                padding-bottom: 30px;
+                padding-left: 50px;
+                font-family: var(--main-text-font);
+                font-size: 12px;
+                text-transform: uppercase;
+                color: #333;
+                border-collapse: collapse;
+                border-bottom: 2px solid #ddd;
+            }
+
+            .cart-content-left table p {
+                font-family: var(--main-text-font);
+                font-size: 12px;
+                color: #333;
+            }
+
+            .cart-content-left table input {
+                width: 30px;
+            }
+
+    .cart-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cart-content-left table span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    .cart-content-left td {
+        padding-top: 20px;
+        padding-left: 50px;
+    }
+
+        .cart-content-left td:first-child img {
+            width: 130px;
+        }
+
+        .cart-content-left td:nth-child(2) {
+            max-width: 130px;
+        }
+
+        .cart-content-left td:nth-child(3) {
+            width: 30px;
+        }
+
+    .cart-content-right {
+        flex: 1;
+        padding-left: 12px;
+        border-left: 2px solid #ddd;
+    }
+
+        .cart-content-right table {
+            width: 100%;
+        }
+
+            .cart-content-right table th {
+                padding-bottom: 42px;
+                font-family: var(--main-text-font);
+                font-size: 12px;
+                text-transform: uppercase;
+                color: #333;
+                border-collapse: collapse;
+                border-bottom: 2px solid #ddd;
+            }
+
+            .cart-content-right table td {
+                font-family: var(--main-text-font);
+                font-size: 12px;
+                color: #333;
+                padding-bottom: 20px;
+                padding-top: 10px;
+            }
+
+        .cart-content-right tr:nth-child(4) td {
+            border-bottom: 2px solid #ddd;
+        }
+
+        .cart-content-right tr td:last-child {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+    .cart-content-right-text-p {
+        font-family: var(--main-text-font);
+        font-size: 12px;
+        color: #333;
+    }
+
+    .cart-content-right-button {
+        text-align: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+        .cart-content-right-button button {
+            padding: 0 18px;
+            height: 35px;
+            cursor: pointer;
+        }
+
+            .cart-content-right-button button:first-child {
+                background-color: #fff;
+                border: 1px solid black;
+                margin-right: 20px;
+            }
+
+                .cart-content-right-button button:first-child:hover {
+                    background-color: #ddd;
+                }
+
+            .cart-content-right-button button:last-child {
+                background-color: black;
+                color: #fff;
+                border: none;
+            }
+
+                .cart-content-right-button button:last-child:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+</style>

@@ -13,17 +13,57 @@ namespace IVYmodaONLINE.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult VeChungToi()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Login()
         {
-            ViewBag.Message = "Your contact page.";
-
+            return View();
+        }
+        public ActionResult Register()
+        {
+            return View();
+        }
+        public ActionResult Sale()
+        {
+            return View();
+        }
+        public ActionResult lifestyle()
+        {
+            return View();
+        }
+        public ActionResult Product()
+        {
+            return View();
+        }
+        public ActionResult Cart()
+        {
+            return View();
+        }
+        public ActionResult Nu_aokieu()
+        {
+            return View();
+        }
+        public ActionResult Nu_aocrop()
+        {
+            return View();
+        }
+        public ActionResult Nam_aothun()
+        {
+            return View();
+        }
+        public ActionResult Nam_aosomi()
+        {
+            return View();
+        }
+        public ActionResult BeTrai_quanao()
+        {
+            return View();
+        }
+        public ActionResult BeGai_quanao()
+        {
             return View();
         }
     }
