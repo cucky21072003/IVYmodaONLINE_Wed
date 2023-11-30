@@ -1,0 +1,20 @@
+﻿@model IEnumerable<IVYmodaONLINE.Models.EF.Productcategory>
+
+@if (Model != null && Model.Any())
+{
+    foreach (Model != null && Model.Any())
+    {
+        <div class="container">
+            <!-- banner 1 -->
+            <div class="new_arrivals_sorting">
+                <ul class="arrivals_grid_sorting ">
+                    @foreach (var item in Model)
+                    {
+                        <li class="grid_sorting_button active is-checked" data-filter="*"><a href="@item.alias">@item.Title</a> </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    }
+}

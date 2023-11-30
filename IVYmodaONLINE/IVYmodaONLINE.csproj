@@ -192,6 +192,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -11798,7 +11799,6 @@
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Menu\MenuTop.cshtml" />
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -11816,6 +11816,10 @@
     <Content Include="Views\Home\Nam_aosomi.cshtml" />
     <Content Include="Views\Home\BeTrai_quanao.cshtml" />
     <Content Include="Views\Home\BeGai_quanao.cshtml" />
+    <Content Include="Views\Menu\_MenuTop.cshtml" />
+    <Content Include="Views\Menu\_MenuProducCategory.cshtml" />
+    <Content Include="Views\Menu\_MenuArivals.cshtml" />
+    <Content Include="Views\Product\Partial_ItemsByCateId.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

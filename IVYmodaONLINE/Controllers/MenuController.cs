@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IVYmodaONLINE.Models;
 
 namespace IVYmodaONLINE.Controllers
 {
@@ -17,8 +18,22 @@ namespace IVYmodaONLINE.Controllers
         }
         public ActionResult MenuTop()
         {
-            var items= _dbContext.Categories.OrderBy(x=>x.Position).ToList();
-            return PartialView("_MenuTop");
+            var items = _dbContext.Categories.OrderBy(x=>x.Position).ToList();
+            return PartialView("_MenuTop",items);
         }
+
+        public ActionResult MenuProducCategory()
+        {
+            var items = _dbContext.Productcategories.ToList();
+            return PartialView("_MenuProducCategory", items);
+        }
+
+        public ActionResult MenuArivals()
+        {
+            var items = _dbContext.Productcategories.ToList();
+            return PartialView("_MenuArivals", items);
+        }
+
+
     }
 }
